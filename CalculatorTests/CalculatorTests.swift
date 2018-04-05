@@ -24,7 +24,7 @@ class CalculatorTests: XCTestCase {
     }
     
     func testSplitNumbers() {
-        let expected = [1,2,1]
+        let expected = [1,2,3]
         let numbers = model.splitNumbers(text: "1+2-3")
         XCTAssert(numbers == expected, "actual \(numbers)")
     }
