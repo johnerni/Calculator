@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = CalculatorViewModel()
-        
+        //test
         for button in numberButtons {
             button.addTarget(self, action: #selector(typeNumber(sender:)), for: .touchUpInside)
         }
