@@ -1,11 +1,10 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-               sh 'fastlane scan'
-            }
-        }
+  agent any
+  stages {
+    stage('Test') {
+      steps {
+        sh 'fastlane scan'
+      }
     }
+  }
 }
