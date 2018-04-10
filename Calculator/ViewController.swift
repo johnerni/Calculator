@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func compute(_ sender: UIButton) {
-        
+        print("TODO compute")
     }
 }
 
