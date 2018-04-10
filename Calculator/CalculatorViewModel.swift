@@ -15,14 +15,13 @@ enum Operators: String {
 
 struct CalculatorViewModel {
     
-    
-    
     /// Parse the string to get the numbers
     ///
     /// - Parameter text: string with numbers and operators
     func splitNumbers(text: String) -> [Int] {
         let numbers:[String] = text.components(separatedBy: ["+", "-"])
-        return numbers.flatMap { return Int($0)!}
+        return numbers.flatMap { return Int($0)}
         
     }
+    
 }

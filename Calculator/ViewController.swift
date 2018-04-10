@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         viewModel = CalculatorViewModel()
         //test
         for button in numberButtons {
-            print("Buttons")
             button.addTarget(self, action: #selector(typeNumber(sender:)), for: .touchUpInside)
         }
         outputLabel.text = "0"
@@ -63,6 +62,7 @@ class ViewController: UIViewController {
             
         }
     }
+    
     @IBAction func compute(_ sender: UIButton) {
         
     }
