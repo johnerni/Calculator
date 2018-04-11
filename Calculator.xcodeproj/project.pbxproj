@@ -13,14 +13,13 @@
 		323346452073918B00682806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 323346442073918B00682806 /* Assets.xcassets */; };
 		323346482073918B00682806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323346462073918B00682806 /* LaunchScreen.storyboard */; };
 		323346562073929D00682806 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323346552073929D00682806 /* CalculatorTests.swift */; };
-		3233465E2073A08500682806 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233465D2073A08500682806 /* CalculatorViewModel.swift */; };
+		3233465E2073A08500682806 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233465D2073A08500682806 /* Arithmetic.swift */; };
 		323747592077B8AD0043E893 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 323747522077B8AD0043E893 /* Appfile */; };
 		3237475A2077B8AD0043E893 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 323747532077B8AD0043E893 /* Fastfile */; };
 		3237475B2077B8AD0043E893 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 323747542077B8AD0043E893 /* README.md */; };
 		3237475C2077B8AD0043E893 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 323747552077B8AD0043E893 /* report.xml */; };
 		3237475D2077B8AD0043E893 /* report.html in Resources */ = {isa = PBXBuildFile; fileRef = 323747572077B8AD0043E893 /* report.html */; };
 		3237475E2077B8AD0043E893 /* report.junit in Resources */ = {isa = PBXBuildFile; fileRef = 323747582077B8AD0043E893 /* report.junit */; };
-		323747602077D02D0043E893 /* Jenkinsfile in Resources */ = {isa = PBXBuildFile; fileRef = 3237475F2077D02D0043E893 /* Jenkinsfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,14 +43,13 @@
 		323346532073929D00682806 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		323346552073929D00682806 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		323346572073929D00682806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3233465D2073A08500682806 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		3233465D2073A08500682806 /* Arithmetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
 		323747522077B8AD0043E893 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		323747532077B8AD0043E893 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		323747542077B8AD0043E893 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		323747552077B8AD0043E893 /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 		323747572077B8AD0043E893 /* report.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = report.html; sourceTree = "<group>"; };
 		323747582077B8AD0043E893 /* report.junit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.junit; sourceTree = "<group>"; };
-		3237475F2077D02D0043E893 /* Jenkinsfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jenkinsfile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +91,6 @@
 		3233463C2073918B00682806 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				3237475F2077D02D0043E893 /* Jenkinsfile */,
 				323747512077B8AD0043E893 /* fastlane */,
 				3233463D2073918B00682806 /* AppDelegate.swift */,
 				3233463F2073918B00682806 /* ViewController.swift */,
@@ -101,7 +98,7 @@
 				323346442073918B00682806 /* Assets.xcassets */,
 				323346462073918B00682806 /* LaunchScreen.storyboard */,
 				323346492073918B00682806 /* Info.plist */,
-				3233465D2073A08500682806 /* CalculatorViewModel.swift */,
+				3233465D2073A08500682806 /* Arithmetic.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 				323346482073918B00682806 /* LaunchScreen.storyboard in Resources */,
 				3237475E2077B8AD0043E893 /* report.junit in Resources */,
 				3237475C2077B8AD0043E893 /* report.xml in Resources */,
-				323747602077D02D0043E893 /* Jenkinsfile in Resources */,
 				323346452073918B00682806 /* Assets.xcassets in Resources */,
 				323346432073918B00682806 /* Main.storyboard in Resources */,
 			);
@@ -247,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				323346402073918B00682806 /* ViewController.swift in Sources */,
-				3233465E2073A08500682806 /* CalculatorViewModel.swift in Sources */,
+				3233465E2073A08500682806 /* Arithmetic.swift in Sources */,
 				3233463E2073918B00682806 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
