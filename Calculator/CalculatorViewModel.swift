@@ -16,13 +16,19 @@ enum Operators: String {
 struct CalculatorViewModel {
     
     
+    func add(num1: Int, num2: Int) -> Int {
+        return num1 + num2
+    }
     
-    /// Parse the string to get the numbers
-    ///
-    /// - Parameter text: string with numbers and operators
-    func splitNumbers(text: String) -> [Int] {
-        let numbers:[String] = text.components(separatedBy: ["+", "-"])
-        return numbers.flatMap { return Int($0)!}
-        
+    func subtract(num1: Int, num2: Int) -> Int {
+        return num1 - num2
+    }
+    
+    func multiply(num1: Int, num2: Int) -> Int {
+        return num1 * num2
+    }
+    
+    func divide(num1: Int, num2: Int) -> Int {
+        return num1 / num2
     }
 }

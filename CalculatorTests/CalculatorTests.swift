@@ -23,18 +23,58 @@ class CalculatorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSplitNumbers() {
-        let expected = [1,2,3]
-        let numbers = model.splitNumbers(text: "1+2-3")
-        XCTAssert(numbers == expected, "actual \(numbers)")
+    func testAdd() {
+        let testInputs:[(input1:Int, input2:Int, expected:Int)] = [
+            (1,2,3),
+            (3,2,5),
+            (11,3,14)
+        ]
+        
+        for testInput in testInputs {
+            let actualOutput = model.add(num1: testInput.input1, num2: testInput.input2)
+            XCTAssert(actualOutput == testInput.expected, "actual: \(actualOutput) expected:\(testInput.expected)")
+        }
     }
     
-    //TODO: uncomment 
+    func testSubtract() {
+        let testInputs:[(input1:Int, input2:Int, expected:Int)] = [
+            (1,2,-1),
+            (3,2,1),
+            (11,3,8)
+        ]
+        
+        for testInput in testInputs {
+            let actualOutput = model.subtract(num1: testInput.input1, num2: testInput.input2)
+            XCTAssert(actualOutput == testInput.expected, "actual: \(actualOutput) expected:\(testInput.expected)")
+        }
+        
+    }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testMultipy() {
+        
+        let testInputs:[(input1:Int, input2:Int, expected:Int)] = [
+            (1,2,2),
+            (3,2,6),
+            (11,3,33)
+        ]
+        
+        for testInput in testInputs {
+            let actualOutput = model.multiply(num1: testInput.input1, num2: testInput.input2)
+            XCTAssert(actualOutput == testInput.expected, "actual: \(actualOutput) expected:\(testInput.expected)")
+        }
+    }
+    
+    func testDivide() {
+        
+        let testInputs:[(input1:Int, input2:Int, expected:Int)] = [
+            (1,2,0),
+            (3,2,1),
+            (11,3,3)
+        ]
+        
+        for testInput in testInputs {
+            let actualOutput = model.divide(num1: testInput.input1, num2: testInput.input2)
+            XCTAssert(actualOutput == testInput.expected, "actual: \(actualOutput) expected:\(testInput.expected)")
         }
     }
     

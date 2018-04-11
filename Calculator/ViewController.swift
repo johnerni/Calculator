@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         viewModel = CalculatorViewModel()
         //test
         for button in numberButtons {
-            print("Buttons")
+            
             button.addTarget(self, action: #selector(typeNumber(sender:)), for: .touchUpInside)
         }
         outputLabel.text = "0"
@@ -33,14 +33,7 @@ class ViewController: UIViewController {
     }
 
     @objc func typeNumber(sender: UIButton) {
-       
-        if let number = sender.titleLabel?.text {
-            if outputLabel.text == "0" {
-                outputLabel.text = number
-            } else {
-                outputLabel.text?.append(number)
-            }
-        }
+       outputLabel.text?.append(String(sender.tag))
     }
 
     @IBAction func minus(_ sender: UIButton) {
@@ -62,6 +55,9 @@ class ViewController: UIViewController {
             outputLabel.text?.append(number)
             
         }
+    }
+    @IBAction func onePressed(_ sender: Any) {
+        print("1")
     }
     @IBAction func compute(_ sender: UIButton) {
         print("TODO computeasd")
