@@ -7,9 +7,15 @@
 //
 
 import Foundation
+enum ArithmeticExpression {
+    case number(Double)
+    indirect case addition(ArithmeticExpression, ArithmeticExpression)
+    indirect case subtraction(ArithmeticExpression, ArithmeticExpression)
+    indirect case multiplication(ArithmeticExpression, ArithmeticExpression)
+    indirect case division(ArithmeticExpression, ArithmeticExpression)
+}
 
 struct Arithmetic {
-    
     func add(num1: Int, num2: Int) -> Int {
         return num1 + num2
     }
