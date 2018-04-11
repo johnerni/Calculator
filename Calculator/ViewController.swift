@@ -10,12 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var viewModel: Arithmetic!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = Arithmetic()
     }
 
     override func didReceiveMemoryWarning() {
