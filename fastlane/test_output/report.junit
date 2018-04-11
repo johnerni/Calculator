@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='CalculatorTests.xctest' tests='4' failures='0'>
+  <testsuite name='CalculatorTests.CalculatorTests' tests='4' failures='0'>
+    <testcase classname='CalculatorTests.CalculatorTests' name='testAdd' time='0.003'/>
+    <testcase classname='CalculatorTests.CalculatorTests' name='testDivide' time='0.001'/>
+    <testcase classname='CalculatorTests.CalculatorTests' name='testMultipy' time='0.001'/>
+    <testcase classname='CalculatorTests.CalculatorTests' name='testSubtract' time='0.000'/>
+  </testsuite>
+</testsuites>

@@ -21,6 +21,7 @@
 		3237475D2077B8AD0043E893 /* report.html in Resources */ = {isa = PBXBuildFile; fileRef = 323747572077B8AD0043E893 /* report.html */; };
 		3237475E2077B8AD0043E893 /* report.junit in Resources */ = {isa = PBXBuildFile; fileRef = 323747582077B8AD0043E893 /* report.junit */; };
 		3237476A207E745C0043E893 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32374769207E745C0043E893 /* CalculatorUITests.swift */; };
+		32374772207E7E940043E893 /* Scanfile in Resources */ = {isa = PBXBuildFile; fileRef = 32374771207E7E940043E893 /* Scanfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		32374767207E745C0043E893 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32374769207E745C0043E893 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		3237476B207E745C0043E893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32374771207E7E940043E893 /* Scanfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scanfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		323747512077B8AD0043E893 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
+				32374771207E7E940043E893 /* Scanfile */,
 				323747522077B8AD0043E893 /* Appfile */,
 				323747532077B8AD0043E893 /* Fastfile */,
 				323747542077B8AD0043E893 /* README.md */,
@@ -274,6 +277,7 @@
 				3237475D2077B8AD0043E893 /* report.html in Resources */,
 				323747592077B8AD0043E893 /* Appfile in Resources */,
 				323346482073918B00682806 /* LaunchScreen.storyboard in Resources */,
+				32374772207E7E940043E893 /* Scanfile in Resources */,
 				3237475E2077B8AD0043E893 /* report.junit in Resources */,
 				3237475C2077B8AD0043E893 /* report.xml in Resources */,
 				323346452073918B00682806 /* Assets.xcassets in Resources */,
