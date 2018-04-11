@@ -13,22 +13,23 @@ enum ArithmeticExpression {
     indirect case subtraction(ArithmeticExpression, ArithmeticExpression)
     indirect case multiplication(ArithmeticExpression, ArithmeticExpression)
     indirect case division(ArithmeticExpression, ArithmeticExpression)
-}
-
-struct Arithmetic {
-    func add(num1: Int, num2: Int) -> Int {
-        return num1 + num2
-    }
     
-    func subtract(num1: Int, num2: Int) -> Int {
-        return num1 - num2
-    }
-    
-    func multiply(num1: Int, num2: Int) -> Int {
-        return num1 * num2
-    }
-    
-    func divide(num1: Int, num2: Int) -> Int {
-        return num1 / num2
+    func evaluate() -> Double {
+        switch self {
+        case let .number(value):
+            return value
+            
+        case let .addition(left, right):
+            return left.evaluate() + right.evaluate()
+            
+        case let .subtraction(left, right):
+            return left.evaluate() - right.evaluate()
+            
+        case let .multiplication(left, right):
+            return left.evaluate() * right.evaluate()
+            
+        case let .division(left, right):
+            return left.evaluate() / right.evaluate()
+        }
     }
 }

@@ -15,6 +15,7 @@ class CalculatorTests: XCTestCase {
     override func setUp() {
         super.setUp()
         model  = Arithmetic()
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -24,58 +25,60 @@ class CalculatorTests: XCTestCase {
     }
     
     func testAdd() {
-        let testInputs:[(input1:Int, input2:Int, expected:Int)] = [
-            (1,2,3),
-            (3,2,5),
-            (11,3,14)
-        ]
+        let testInputs: [(expression: ArithmeticExpression, expected: Double)] = [
+            (ArithmeticExpression.addition(ArithmeticExpression.number(1), ArithmeticExpression.number(2)), 3),
+            (ArithmeticExpression.addition(ArithmeticExpression.number(3), ArithmeticExpression.number(2)), 5),
+            (ArithmeticExpression.addition(ArithmeticExpression.number(11), ArithmeticExpression.number(3)), 14),
+            ]
         
         for testInput in testInputs {
-            let actualOutput = model.add(num1: testInput.input1, num2: testInput.input2)
+            let actualOutput = testInput.expression.evaluate()
             XCTAssert(actualOutput == testInput.expected, "actual: \(actualOutput) expected:\(testInput.expected)")
         }
+        
     }
     
     func testSubtract() {
-        let testInputs:[(input1:Int, input2:Int, expected:Int)] = [
-            (1,2,-1),
-            (3,2,1),
-            (11,3,8)
+        let testInputs: [(expression: ArithmeticExpression, expected: Double)] = [
+            (ArithmeticExpression.subtraction(ArithmeticExpression.number(1), ArithmeticExpression.number(2)), -1),
+            (ArithmeticExpression.subtraction(ArithmeticExpression.number(3), ArithmeticExpression.number(2)), 1),
+            (ArithmeticExpression.subtraction(ArithmeticExpression.number(11), ArithmeticExpression.number(3)), 8),
         ]
         
         for testInput in testInputs {
-            let actualOutput = model.subtract(num1: testInput.input1, num2: testInput.input2)
+            let actualOutput = testInput.expression.evaluate()
             XCTAssert(actualOutput == testInput.expected, "actual: \(actualOutput) expected:\(testInput.expected)")
         }
         
     }
     
     func testMultipy() {
-        
-        let testInputs:[(input1:Int, input2:Int, expected:Int)] = [
-            (1,2,2),
-            (3,2,6),
-            (11,3,33)
-        ]
+        let testInputs: [(expression: ArithmeticExpression, expected: Double)] = [
+            (ArithmeticExpression.multiplication(ArithmeticExpression.number(1), ArithmeticExpression.number(2)), 2),
+            (ArithmeticExpression.multiplication(ArithmeticExpression.number(3), ArithmeticExpression.number(2)), 6),
+            (ArithmeticExpression.multiplication(ArithmeticExpression.number(11), ArithmeticExpression.number(3)), 33),
+            ]
         
         for testInput in testInputs {
-            let actualOutput = model.multiply(num1: testInput.input1, num2: testInput.input2)
+            let actualOutput = testInput.expression.evaluate()
             XCTAssert(actualOutput == testInput.expected, "actual: \(actualOutput) expected:\(testInput.expected)")
         }
+        
     }
     
     func testDivide() {
-        
-        let testInputs:[(input1:Int, input2:Int, expected:Int)] = [
-            (1,2,0),
-            (3,2,1),
-            (11,3,3)
-        ]
+        let testInputs: [(expression: ArithmeticExpression, expected: Double)] = [
+            (ArithmeticExpression.division(ArithmeticExpression.number(1), ArithmeticExpression.number(2)), 0.5),
+            (ArithmeticExpression.division(ArithmeticExpression.number(3), ArithmeticExpression.number(2)), 1.5),
+            (ArithmeticExpression.division(ArithmeticExpression.number(11), ArithmeticExpression.number(3)), 3.66666666666667),
+            ]
         
         for testInput in testInputs {
-            let actualOutput = model.divide(num1: testInput.input1, num2: testInput.input2)
-            XCTAssert(actualOutput == testInput.expected, "actual: \(actualOutput) expected:\(testInput.expected)")
+            let actualOutput = testInput.expression.evaluate()
+            let isEqual = actualOutput - testInput.expected <= 0.0000000001
+            XCTAssert(isEqual, "actual: \(actualOutput) expected:\(testInput.expected)")
         }
+        
     }
     
 }
