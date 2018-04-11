@@ -11,10 +11,8 @@ import XCTest
 
 class CalculatorTests: XCTestCase {
     
-    var model: Arithmetic!
     override func setUp() {
         super.setUp()
-        model  = Arithmetic()
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
